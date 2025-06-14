@@ -14,7 +14,7 @@ def get_numbers_ticket(min, max, quantity):
     try:
         tickets_set = set()
         empty_list = []
-        if quantity > max:
+        if quantity > (max - min + 1) or min > max or min < 1 or max > 1000 :
             return empty_list
         else:
             while len(tickets_set) < quantity:
